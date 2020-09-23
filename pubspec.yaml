@@ -1,0 +1,145 @@
+name: cahaya_halim_pool
+description: Swiming Pool Construction & Management in Indonesia.
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.6.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  universal_html: ^1.2.3
+  division: ^0.8.8
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^0.1.2
+  responsive_builder: ^0.1.4
+  get_it: null
+  provider_architecture: null
+  provider: ^3.1.0
+  http: ^0.12.0+2
+  youtube_player_iframe: ^1.1.0
+  carousel_slider: ^2.2.1
+  video_player: ^0.10.11+2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - images/logo.png
+    - images/home1.jpg
+    - images/home2.jpg
+    - images/home3.jpg
+    - images/homeicon1.jpg
+    - images/homeicon2.jpg
+    - images/homeicon3.jpg
+    - images/homeicon4.jpg
+    - images/homeicon5.jpg
+    - images/homeicon6.jpg
+    - images/construction1.JPG
+    - images/construction2.JPG
+    - images/construction3.JPG
+    - images/construction4.JPG
+    - images/construction5.JPG
+    - images/construction6.JPG
+    - images/fb.png
+    - images/ig.png
+    - images/in.png
+    - images/goo.png
+    - images/yt.png
+    - images/logo-apsp-top.png
+    - images/logo-bbb-top.png
+    - images/pentairWater.png
+    - images/assets/about1.JPG
+    - images/assets/about2.JPG
+    - images/assets/construction1.JPG
+    - images/assets/construction2.JPG
+    - images/assets/construction3.JPG
+    - images/assets/construction4.JPG
+    - images/assets/construction5.JPG
+    - images/assets/construction6.JPG
+    - images/assets/construction7.JPG
+    - images/assets/construction8.JPG
+    - images/assets/construction9.JPG
+    - images/assets/construction10.JPG
+    - images/assets/gallery1.JPG
+    - images/assets/gallery2.JPG
+    - images/assets/gallery3.JPG
+    - images/assets/gallery4.JPG
+    - images/assets/gallery5.JPG
+    - images/assets/gallery6.JPG
+    - images/assets/gallery7.JPG
+    - images/assets/home1.JPG
+    - images/assets/home2.JPG
+    - images/assets/home3.JPG
+    - images/assets/home4.JPG
+    - images/assets/home5.JPG
+    - images/assets/home6.JPG
+    - images/assets/home7.JPG
+    - images/assets/layoutDesign.JPG
+    - images/assets/maingallery1.JPG
+    - images/assets/maingallery2.JPG
+    - images/assets/maingallery3.JPG
+    - images/assets/maingallery4.JPG
+    - images/assets/maingallery5.JPG
+    - images/assets/maingallery6.JPG
+    - images/assets/maingallery7.JPG
+    - images/assets/testimonial1.JPG
+    - images/assets/testimonial2.JPG
+    - images/assets/testimonial3.JPG
+    - images/assets/testimonial4.JPG
+    - images/assets/testimonial5.JPG
+    
+
+  #  - images/a_dot_ham.jpeg
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware.
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  fonts:
+    - family: Open Sans
+      fonts:
+        - asset: assets/fonts/OpenSans-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/OpenSans-Regular.ttf
+          weight: 400
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
+
