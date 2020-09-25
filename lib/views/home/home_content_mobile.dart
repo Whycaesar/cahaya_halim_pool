@@ -1,16 +1,108 @@
+import 'package:cahaya_halim_pool/classes/language.dart';
+import 'package:cahaya_halim_pool/localization/localization_constant.dart';
+import 'package:cahaya_halim_pool/main.dart';
 import 'package:cahaya_halim_pool/views/contact/contact_detail_mobile.dart';
 import 'package:cahaya_halim_pool/views/footer/footer_view.dart';
 import 'package:cahaya_halim_pool/views/home/home_carrousel.dart';
 import 'package:cahaya_halim_pool/views/home/home_carrousel_footer_mobile.dart';
 import 'package:cahaya_halim_pool/views/home/home_video.dart';
+import 'package:cahaya_halim_pool/widgets/dark_theme/dark_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-class HomeContentMobile extends StatelessWidget {
+class HomeContentMobile extends StatefulWidget {
+  @override
+  _HomeContentMobileState createState() => _HomeContentMobileState();
+}
+
+class _HomeContentMobileState extends State<HomeContentMobile> {
+  void _changeLanguage(Language language) {
+    // print(language.languageCode);
+    Locale _temp;
+    switch (language.languageCode) {
+      case 'en':
+        _temp = Locale(language.languageCode, 'US');
+        break;
+      case 'id':
+        _temp = Locale(language.languageCode, 'ID');
+        break;
+      default:
+        _temp = Locale(language.languageCode, 'US');
+    }
+
+    MaterialAppWithTheme.setLocale(context, _temp);
+  }
+
   @override
   Widget build(BuildContext context) {
+    ThemeChanger _themeChanger = Provider.of<ThemeChanger>(context);
     return ListView(
       // padding: const EdgeInsets.symmetric(horizontal: 70, vertical: 60),
       children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            FlatButton(
+              // child: Text(
+              //   getTranslated(context, 'home_page'),
+              // ),
+              child: Text(
+                getTranslated(context, 'dark_theme'),
+              ),
+              onPressed: () => _themeChanger.setTheme(ThemeData.dark()),
+            ),
+            FlatButton(
+              child: Text(
+                getTranslated(context, 'light_theme'),
+              ),
+              onPressed: () => _themeChanger.setTheme(ThemeData.light()),
+            ),
+            Container(
+              // width: 100,
+              // color: Colors.red,
+
+              child: DropdownButton(
+                hint: Text("Language"),
+                dropdownColor: Colors.grey,
+                elevation: 5,
+                onChanged: (Language language) {
+                  _changeLanguage(language);
+                  // Navigator.pop(context);
+                },
+                icon: Icon(
+                  Icons.language,
+                  color: Colors.grey,
+                  // size: 50,
+                ),
+                underline: SizedBox(),
+                items: Language.languageList()
+                    .map<DropdownMenuItem<Language>>((lang) => DropdownMenuItem(
+                          value: lang,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Text(lang.flag),
+                              Text(lang.name),
+                            ],
+                          ),
+                        ))
+                    .toList(),
+              ),
+              width: 120,
+
+              // alignment: Alignment.center,
+              // decoration: ShapeDecoration(
+              //   shape: RoundedRectangleBorder(
+              //     side: BorderSide(width: 1.0, style: BorderStyle.solid),
+              //     borderRadius: BorderRadius.all(Radius.circular(150.0)),
+              //   ),
+              // ),
+            ),
+            SizedBox(
+              width: 20,
+            )
+          ],
+        ),
         HomeCarrousel(),
         Container(
           child: Column(
@@ -27,7 +119,7 @@ class HomeContentMobile extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      "WELCOME TO CAHAYA HALIM POOLS",
+                      getTranslated(context, 'home_tittle'),
                       style: TextStyle(
                         fontSize: 24,
 
@@ -38,11 +130,7 @@ class HomeContentMobile extends StatelessWidget {
                     ),
                     SizedBox(height: 20),
                     Text(
-                      """We are the leading Jakarta area swimming pool construction company. Cahaya Halim Pools builds impressive custom swimming pools for the greater Jakarta region, with high quality material and at affordable prices. A pool that is properly planned and constructed will enhance the beauty and value of your home.
-
-We will design/build your swimming pool to match your vision, your lifestyle, and your budget. Make your backyard a vacation paradise. From our freeform pool designs, relaxing spas, and one-of-a-kind water features, to our outdoor living upgrades including patio extensions, outdoor kitchens, pergolas and more. Customer satisfaction is of the utmost importance. REPUTATION IS EVERYTHING! Check out some of our customer testimonials.
-
-Call us today and ask about our Jakarta area swimming pool construction and design specials! Serving all of Jakarta, including Bogor, Depok, Tangerang, Bekasi, and more.""",
+                      getTranslated(context, 'home_description'),
                       style: TextStyle(
                         fontSize: 14,
                         letterSpacing: 1.4,
@@ -172,7 +260,7 @@ Call us today and ask about our Jakarta area swimming pool construction and desi
                 child: Column(
                   children: [
                     Text(
-                      "Swimming Pool Design",
+                      getTranslated(context, 'home_design_tittle'),
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 26,
@@ -183,9 +271,7 @@ Call us today and ask about our Jakarta area swimming pool construction and desi
                       height: 50,
                     ),
                     Text(
-                      '''
-Let the Jakarta swimming pool design professionals at Cahaya Halim Pools design your next dream-pool. Every client receives a 3-D computer generated design before we begin construction. These masterfully created renderings allow you to see all the elements of your pool design as they integrate to your home and backyard. At this phase, you can make revisions and improvements as necessary. Upon approval of your design, we use this layout to create detailed construction plans and we begin the layout process. We also provide swimming pool construction in Bogor, Depok, Tangerang, Bekasi and other surrounding Jabodetabek communities.
-                ''',
+                      getTranslated(context, 'home_design_description'),
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 14,

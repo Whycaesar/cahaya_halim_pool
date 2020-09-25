@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 // ignore: must_be_immutable
 class PoolConstructionItemMobile extends StatelessWidget {
   String image;
-  String title;
-  String description;
+  var title;
+  var description;
 
   PoolConstructionItemMobile(this.image, this.title, this.description);
 

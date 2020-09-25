@@ -1,4 +1,5 @@
 import 'package:cahaya_halim_pool/constants/app_colors.dart';
+import 'package:cahaya_halim_pool/localization/localization_constant.dart';
 import 'package:cahaya_halim_pool/views/contact/contact_detail_mobile.dart';
 import 'package:cahaya_halim_pool/views/footer/footer_view.dart';
 import 'package:cahaya_halim_pool/widgets/course_details/product_detail_mobile.dart';
@@ -28,7 +29,7 @@ class GalleryViewMobile extends StatelessWidget {
                 color: Color.fromRGBO(30, 20, 225, 0.2),
                 child: Center(
                     child: Text(
-                  "GALLERY",
+                  getTranslated(context, 'navbar_gallery'),
                   style: TextStyle(
                       fontSize: 40,
                       fontFamily: "Open Sans",
@@ -64,7 +65,7 @@ class GalleryViewMobile extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Take A Look At Some Great Ways To Improve Your Life…",
+                      getTranslated(context, 'gallery_tittle'),
                       style: TextStyle(
                         fontSize: 26,
                         letterSpacing: 2,
@@ -75,7 +76,7 @@ class GalleryViewMobile extends StatelessWidget {
                       height: 20,
                     ),
                     Text(
-                      """There’s no better way to “vacation in your own backyard” than with a brand-new swimming pool. But you already know that, that’s why you’re here. Found your inspiration here.""",
+                      getTranslated(context, 'gallery_description'),
                       style: TextStyle(
                         fontSize: 14,
                         letterSpacing: 1.4,

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class ContactItem extends StatelessWidget {
-  String title;
-  String deskription;
+  var title;
+  var deskription;
   IconData icon;
 
   ContactItem(this.title, this.deskription, this.icon);

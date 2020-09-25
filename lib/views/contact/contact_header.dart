@@ -1,3 +1,4 @@
+import 'package:cahaya_halim_pool/localization/localization_constant.dart';
 import 'package:flutter/material.dart';
 
 class ContactHeader extends StatelessWidget {
@@ -22,7 +23,7 @@ class ContactHeader extends StatelessWidget {
             color: Color.fromRGBO(30, 20, 225, 0.2),
             child: Center(
                 child: Text(
-              "CONTACT US",
+              getTranslated(context, 'navbar_contactus'),
               style: TextStyle(
                   fontSize: 40,
                   fontFamily: "Open Sans",

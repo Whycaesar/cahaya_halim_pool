@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 // ignore: must_be_immutable
 class PoolConstructionItem extends StatelessWidget {
   String image;
-  String title;
-  String description;
+  var title;
+  var description;
 
   PoolConstructionItem(this.image, this.title, this.description);
 
@@ -58,8 +58,11 @@ class PoolConstructionItem extends StatelessWidget {
                   // """Let the Austin swimming pool design professionals at Denali Pools design your next dream-pool. Every client receives a 3-D computer generated design before we begin construction. These masterfully created renderings allow you to see all the elements of your pool design as they integrate to your home and backyard. At this phase, you can make revisions and improvements as necessary. Upon approval of your design, we use this layout to create detailed construction plans and we begin the layout process. We also provide swimming pool construction in Round Rock, Georgetown, Cedar Park and other surrounding Texas communities.""",
                   description,
                   style: TextStyle(
-                    fontSize: 12,
-                    letterSpacing: 1.2,
+                    fontSize: 14,
+                    fontFamily: "Open Sans",
+                    fontWeight: FontWeight.w500,
+                    height: 2,
+                    letterSpacing: 1.4,
                   ),
                 )
               ],

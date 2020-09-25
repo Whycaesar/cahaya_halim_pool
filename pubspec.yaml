@@ -19,6 +19,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
   universal_html: ^1.2.3
   division: ^0.8.8
 
@@ -113,6 +115,8 @@ flutter:
     - images/assets/testimonial3.JPG
     - images/assets/testimonial4.JPG
     - images/assets/testimonial5.JPG
+    - lib/lang/en.json
+    - lib/lang/id.json
     
 
   #  - images/a_dot_ham.jpeg

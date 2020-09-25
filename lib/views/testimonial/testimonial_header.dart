@@ -1,3 +1,4 @@
+import 'package:cahaya_halim_pool/localization/localization_constant.dart';
 import 'package:flutter/material.dart';
 
 class TestimonialHeader extends StatelessWidget {
@@ -24,7 +25,7 @@ class TestimonialHeader extends StatelessWidget {
             color: Color.fromRGBO(30, 20, 225, 0.2),
             child: Center(
                 child: Text(
-              "TESTIMONIALS",
+              getTranslated(context, 'navbar_testimonials'),
               style: TextStyle(
                   fontSize: 40,
                   fontFamily: "Open Sans",

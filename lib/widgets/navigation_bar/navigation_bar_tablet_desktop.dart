@@ -1,3 +1,4 @@
+import 'package:cahaya_halim_pool/localization/localization_constant.dart';
 import 'package:cahaya_halim_pool/locator.dart';
 import 'package:cahaya_halim_pool/services/navigation_service.dart';
 import 'package:flutter/material.dart';
@@ -36,7 +37,8 @@ class NavigationBarTabletDesktop extends StatelessWidget {
                   highlightColor: Colors.blue[100],
                   // hoverColor: Colors.blue,
                   splashColor: Colors.blue[600],
-                  icon: NavBarItem('GALLERY', GalleryRoute),
+                  icon: NavBarItem(
+                      getTranslated(context, 'navbar_gallery'), GalleryRoute),
                   onPressed: () {
                     locator<NavigationService>().navigateTo(GalleryRoute);
                   },
@@ -46,7 +48,9 @@ class NavigationBarTabletDesktop extends StatelessWidget {
                   highlightColor: Colors.blue[100],
                   // hoverColor: Colors.blue,
                   splashColor: Colors.blue[600],
-                  icon: NavBarItem('CONSTRUCTION', PoolConstructionRoute),
+                  icon: NavBarItem(
+                      getTranslated(context, 'navbar_construction'),
+                      PoolConstructionRoute),
                   onPressed: () {
                     locator<NavigationService>()
                         .navigateTo(PoolConstructionRoute);
@@ -59,7 +63,9 @@ class NavigationBarTabletDesktop extends StatelessWidget {
                   highlightColor: Colors.blue[100],
                   // hoverColor: Colors.blue,
                   splashColor: Colors.blue[600],
-                  icon: NavBarItem('TESTIMONIALS', TestimonialsRoute),
+                  icon: NavBarItem(
+                      getTranslated(context, 'navbar_testimonials'),
+                      TestimonialsRoute),
                   onPressed: () {
                     locator<NavigationService>().navigateTo(TestimonialsRoute);
                   },
@@ -71,7 +77,8 @@ class NavigationBarTabletDesktop extends StatelessWidget {
                   highlightColor: Colors.blue[100],
                   // hoverColor: Colors.blue,
                   splashColor: Colors.blue[600],
-                  icon: NavBarItem('ABOUT US', AboutRoute),
+                  icon: NavBarItem(
+                      getTranslated(context, 'navbar_aboutus'), AboutRoute),
                   onPressed: () {
                     locator<NavigationService>().navigateTo(AboutRoute);
                   },
@@ -83,7 +90,8 @@ class NavigationBarTabletDesktop extends StatelessWidget {
                   highlightColor: Colors.blue[100],
                   // hoverColor: Colors.blue,
                   splashColor: Colors.blue[600],
-                  icon: NavBarItem('CONTACT US', ContactUsRoute),
+                  icon: NavBarItem(getTranslated(context, 'navbar_contactus'),
+                      ContactUsRoute),
                   onPressed: () {
                     locator<NavigationService>().navigateTo(ContactUsRoute);
                   },

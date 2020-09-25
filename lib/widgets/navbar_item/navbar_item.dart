@@ -8,11 +8,12 @@ import 'package:cahaya_halim_pool/widgets/navbar_item/navbar_item_desktop.dart';
 import 'package:cahaya_halim_pool/widgets/navbar_item/navbar_item_mobile.dart';
 import 'package:cahaya_halim_pool/extensions/hover_extensions.dart';
 
+// ignore: must_be_immutable
 class NavBarItem extends StatelessWidget {
-  final String title;
-  final String navigationPath;
-  final IconData icon;
-  const NavBarItem(this.title, this.navigationPath, {this.icon});
+  var title;
+  String navigationPath;
+  IconData icon;
+  NavBarItem(this.title, this.navigationPath, {this.icon});
 
   @override
   Widget build(BuildContext context) {

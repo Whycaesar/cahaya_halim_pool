@@ -1,3 +1,4 @@
+import 'package:cahaya_halim_pool/localization/localization_constant.dart';
 import 'package:flutter/material.dart';
 
 class HomeDesign extends StatelessWidget {
@@ -31,7 +32,7 @@ class HomeDesign extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      "Swimming Pool Design",
+                      getTranslated(context, 'home_design_tittle'),
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 26,
@@ -42,7 +43,7 @@ class HomeDesign extends StatelessWidget {
                       height: 50,
                     ),
                     Text(
-                      '''Let the Jakarta swimming pool design professionals at Cahaya Halim Pools design your next dream-pool. Every client receives a 3-D computer generated design before we begin construction. These masterfully created renderings allow you to see all the elements of your pool design as they integrate to your home and backyard. At this phase, you can make revisions and improvements as necessary. Upon approval of your design, we use this layout to create detailed construction plans and we begin the layout process. We also provide swimming pool construction in Bogor, Depok, Tangerang, Bekasi and other surrounding Jabodetabek communities.''',
+                      getTranslated(context, 'home_design_description'),
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 14,

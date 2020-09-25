@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:cahaya_halim_pool/localization/localization_constant.dart';
 import 'package:cahaya_halim_pool/views/contact/contact_detail.dart';
 import 'package:cahaya_halim_pool/views/footer/footer_view.dart';
 import 'package:cahaya_halim_pool/views/testimonial/testimonial_comment.dart';
@@ -24,15 +25,15 @@ class _TestimonialDesktopState extends State<TestimonialDesktop> {
       initialVideoId: 'tcodrIK2P_I',
       params: const YoutubePlayerParams(
         playlist: [
-          'nPt8bK2gbaU',
-          'K18cpp_-gP8',
-          'iLnmTe5Q2Qw',
-          '_WoCV4c6XOE',
-          'KmzdUe0RSJo',
-          '6jZDSSZZxjQ',
-          'p2lYr3vM_1w',
-          '7QUtEmBT_-w',
-          '34_PXCzGw1M',
+          // 'nPt8bK2gbaU',
+          // 'K18cpp_-gP8',
+          // 'iLnmTe5Q2Qw',
+          // '_WoCV4c6XOE',
+          // 'KmzdUe0RSJo',
+          // '6jZDSSZZxjQ',
+          // 'p2lYr3vM_1w',
+          // '7QUtEmBT_-w',
+          // '34_PXCzGw1M',
         ],
         startAt: const Duration(minutes: 1, seconds: 36),
         showControls: true,
@@ -103,7 +104,7 @@ class _TestimonialDesktopState extends State<TestimonialDesktop> {
                           top: 70,
                         ),
                         child: Text(
-                          "What our clients say about us…",
+                          getTranslated(context, 'testimonial_tittle'),
                           style: TextStyle(
                             fontSize: 26,
                             letterSpacing: 2,
@@ -119,7 +120,7 @@ class _TestimonialDesktopState extends State<TestimonialDesktop> {
                         child: Column(
                           children: [
                             Text(
-                              "Testimonial for Pool Maintenance",
+                              getTranslated(context, 'testimonial_subtittle'),
                               style: TextStyle(
                                 fontSize: 16,
                                 letterSpacing: 1.4,

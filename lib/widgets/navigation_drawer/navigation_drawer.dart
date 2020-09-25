@@ -1,3 +1,4 @@
+import 'package:cahaya_halim_pool/localization/localization_constant.dart';
 import 'package:flutter/material.dart';
 import 'package:cahaya_halim_pool/constants/app_colors.dart';
 import 'package:cahaya_halim_pool/routing/route_names.dart';
@@ -23,27 +24,27 @@ class NavigationDrawer extends StatelessWidget {
           // BONUS: Combine the UI for this widget with the NavBarItem and make it responsive.
           // The UI for the current DrawerItem shows when it's in mobile, else it shows the NavBarItem ui.
           NavBarItem(
-            'GALLERY',
+            getTranslated(context, 'navbar_gallery'),
             GalleryRoute,
             icon: Icons.photo_library,
           ),
           NavBarItem(
-            'CONSTRUCTION',
+            getTranslated(context, 'navbar_construction'),
             PoolConstructionRoute,
             icon: Icons.picture_in_picture,
           ),
           NavBarItem(
-            'TESTIMONIALS',
+            getTranslated(context, 'navbar_testimonials'),
             TestimonialsRoute,
             icon: Icons.comment,
           ),
           NavBarItem(
-            'ABOUT US',
+            getTranslated(context, 'navbar_aboutus'),
             AboutRoute,
             icon: Icons.info,
           ),
           NavBarItem(
-            'CONTACT US',
+            getTranslated(context, 'navbar_contactus'),
             ContactUsRoute,
             icon: Icons.contacts,
           ),

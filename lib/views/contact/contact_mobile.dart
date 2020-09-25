@@ -1,3 +1,4 @@
+import 'package:cahaya_halim_pool/localization/localization_constant.dart';
 import 'package:cahaya_halim_pool/views/contact/contact_detail_mobile.dart';
 import 'package:cahaya_halim_pool/views/footer/footer_view.dart';
 import 'package:flutter/material.dart';
@@ -28,7 +29,7 @@ class ContactMobile extends StatelessWidget {
                 color: Color.fromRGBO(30, 20, 225, 0.2),
                 child: Center(
                     child: Text(
-                  "CONTACT US",
+                  getTranslated(context, 'navbar_contactus'),
                   style: TextStyle(
                       fontSize: 40,
                       fontFamily: "Open Sans",

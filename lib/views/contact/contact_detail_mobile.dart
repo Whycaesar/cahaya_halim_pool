@@ -1,3 +1,4 @@
+import 'package:cahaya_halim_pool/localization/localization_constant.dart';
 import 'package:cahaya_halim_pool/views/contact/contact_item.dart';
 import 'package:cahaya_halim_pool/widgets/call_to_action/call_to_action.dart';
 import 'package:flutter/material.dart';
@@ -67,7 +68,7 @@ class _ContactDetailMobileState extends State<ContactDetailMobile> {
               //   ),
               // ),
               ContactItem(
-                "Call Us",
+                getTranslated(context, 'contactus_callus'),
                 "0815-8496-3994",
                 Icons.phone,
               ),
@@ -75,7 +76,7 @@ class _ContactDetailMobileState extends State<ContactDetailMobile> {
                 height: 30,
               ),
               ContactItem(
-                "Email Us",
+                getTranslated(context, 'contactus_emailus'),
                 "info@cahayahalimpool.com",
                 Icons.mail_outline,
               ),
@@ -83,8 +84,8 @@ class _ContactDetailMobileState extends State<ContactDetailMobile> {
                 height: 30,
               ),
               ContactItem(
-                "Our Address",
-                "South Jakarta - Indonesia",
+                getTranslated(context, 'contactus_address'),
+                getTranslated(context, 'contactus_address_detail'),
                 Icons.location_on,
               ),
             ],
@@ -101,7 +102,7 @@ class _ContactDetailMobileState extends State<ContactDetailMobile> {
                 height: 50,
               ),
               Text(
-                "Do you have questions? Want some free advice for your new Backyard Project? We’ll be happy to schedule a no obligation, one-on-one consultation with you, to help you visualize your dream. Please call us at 0815-8496-3994 or fill out our form.",
+                getTranslated(context, 'contactus_description'),
                 style: TextStyle(
                   fontSize: 12,
                   fontFamily: "Open Sans",
@@ -131,7 +132,7 @@ class _ContactDetailMobileState extends State<ContactDetailMobile> {
                           letterSpacing: 1.4,
                         ),
                         decoration: InputDecoration(
-                          hintText: "Name",
+                          hintText: getTranslated(context, 'contactus_name'),
                           // fillColor: Colors.green,
                           labelStyle: TextStyle(
                             color: Colors.deepPurple,
@@ -139,7 +140,8 @@ class _ContactDetailMobileState extends State<ContactDetailMobile> {
                             letterSpacing: 1.4,
                             wordSpacing: 5,
                           ),
-                          labelText: "Full Name",
+                          labelText:
+                              getTranslated(context, 'contactus_full_name'),
                           counterText: "",
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5),
@@ -149,7 +151,8 @@ class _ContactDetailMobileState extends State<ContactDetailMobile> {
                         // ignore: missing_return
                         validator: (String value) {
                           if (value.isEmpty) {
-                            return 'Name Cann\'t be Empty';
+                            return getTranslated(
+                                context, 'contactus_name_alert');
                           }
                         },
                       ),
@@ -166,8 +169,9 @@ class _ContactDetailMobileState extends State<ContactDetailMobile> {
                             // height: 0.5,
                             ),
                         decoration: InputDecoration(
-                          hintText: "Phone",
-                          labelText: "Phone Number",
+                          hintText: getTranslated(context, 'contactus_phone'),
+                          labelText:
+                              getTranslated(context, 'contactus_phone_number'),
                           labelStyle: TextStyle(
                             color: Colors.deepPurple,
                             fontSize: 14,
@@ -183,7 +187,8 @@ class _ContactDetailMobileState extends State<ContactDetailMobile> {
                         // ignore: missing_return
                         validator: (String value) {
                           if (value.isEmpty) {
-                            return 'Phone Number Cann\'t Be Empty';
+                            return getTranslated(
+                                context, 'contactus_phone_alert');
                           }
                         },
                       ),
@@ -200,9 +205,10 @@ class _ContactDetailMobileState extends State<ContactDetailMobile> {
                             ),
 
                         decoration: InputDecoration(
-                          hintText: "Email",
+                          hintText: getTranslated(context, 'contactus_email'),
                           // border: InputBorder.none,
-                          labelText: "Email Address",
+                          labelText:
+                              getTranslated(context, 'contactus_email_address'),
                           labelStyle: TextStyle(
                             color: Colors.deepPurple,
                             fontSize: 14,
@@ -218,7 +224,8 @@ class _ContactDetailMobileState extends State<ContactDetailMobile> {
                         // ignore: missing_return
                         validator: (String value) {
                           if (value.isEmpty) {
-                            return 'Email Cann\'t Be Empty';
+                            return getTranslated(
+                                context, 'contactus_email_alert');
                           }
                         },
                       ),
@@ -235,9 +242,10 @@ class _ContactDetailMobileState extends State<ContactDetailMobile> {
                             ),
 
                         decoration: InputDecoration(
-                          hintText: "Comments / Questions",
+                          hintText: getTranslated(context, 'contactus_comment'),
                           // border: InputBorder.none,
-                          labelText: "Description",
+                          labelText: getTranslated(
+                              context, 'contactus_description_form'),
                           labelStyle: TextStyle(
                             color: Colors.deepPurple,
                             fontSize: 14,
@@ -283,7 +291,9 @@ class _ContactDetailMobileState extends State<ContactDetailMobile> {
                             );
                           }
                         },
-                        child: CallToAction("Submit"),
+                        child: CallToAction(
+                          getTranslated(context, 'contactus_submit'),
+                        ),
                       )
                     ],
                   ),

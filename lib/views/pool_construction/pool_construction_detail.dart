@@ -1,4 +1,5 @@
 import 'package:cahaya_halim_pool/constants/app_colors.dart';
+import 'package:cahaya_halim_pool/localization/localization_constant.dart';
 import 'package:cahaya_halim_pool/views/pool_construction/pool_construction_item.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +30,7 @@ class PoolConstructionDetail extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Pool Construction. Creating your dream.",
+                  getTranslated(context, 'construction_tittle'),
                   style: TextStyle(
                     fontSize: 26,
                     letterSpacing: 2,
@@ -40,10 +41,13 @@ class PoolConstructionDetail extends StatelessWidget {
                   height: 10,
                 ),
                 Text(
-                  """Cahaya Halim Pools is consistently recognized for our superior level of Jakarta swimming pool and spa construction.  We also provide swimming pool construction in Bogor, Depok, Tangerang and Bekasi. Below, we have listed the phases of swimming pool construction.""",
+                  getTranslated(context, 'construction_description'),
                   style: TextStyle(
-                    fontSize: 12,
-                    letterSpacing: 1.2,
+                    fontSize: 14,
+                    fontFamily: "Open Sans",
+                    fontWeight: FontWeight.w500,
+                    height: 2,
+                    letterSpacing: 1.4,
                   ),
                 ),
               ],
@@ -51,53 +55,53 @@ class PoolConstructionDetail extends StatelessWidget {
           ),
           PoolConstructionItem(
             "images/assets/construction1.JPG",
-            "1. Swimming Pool Design",
-            """Let the Jakarta swimming pool design professionals at Cahaya Halim Pools design your next dream-pool. Every client receives a 3-D computer generated design before we begin construction. These masterfully created renderings allow you to see all the elements of your pool design as they integrate to your home and backyard. At this phase, you can make revisions and improvements as necessary. Upon approval of your design, we use this layout to create detailed construction plans and we begin the layout process. We also provide swimming pool construction in Bogor, Depok, Tangerang and Bekasi surrounding Jabodetabek communities.""",
+            getTranslated(context, 'construction_tittle_1'),
+            getTranslated(context, 'construction_description_1'),
           ),
           PoolConstructionItem(
             "images/assets/construction2.JPG",
-            "2. Layout",
-            """In the layout phase, we take the dimensions of the pool design & construction plans, and lay it out onto the proposed pool site. This allows you to see the outlines of the actual size and shape of the pool and make any changes to the size and location of the pool before we actually break ground.""",
+            getTranslated(context, 'construction_tittle_2'),
+            getTranslated(context, 'construction_description_2'),
           ),
           PoolConstructionItem(
             "images/assets/construction3.JPG",
-            "3. Excavation",
-            """Once the layout phase is complete, we use a backhoe for excavation for your swimming pool and spa. We excavate to your pools exact measurements and specifications.  We are now ready for forms and rebar.""",
+            getTranslated(context, 'construction_tittle_3'),
+            getTranslated(context, 'construction_description_3'),
           ),
           PoolConstructionItem(
             "images/assets/construction4.JPG",
-            "4. Forms and Rebar",
-            """We use wood forms and rebar to create the detail and exact shape for your design. Together the forms and rebar create the framework and high structural integrity of your pool.""",
+            getTranslated(context, 'construction_tittle_4'),
+            getTranslated(context, 'construction_description_4'),
           ),
           PoolConstructionItem(
             "images/assets/construction5.JPG",
-            "5. Electrical and Plumbing",
-            """In this phase we install all the electrical and plumbing lines. The plumbing is put under pressure and inspected.  The electrical is installed per required city and state codes.""",
+            getTranslated(context, 'construction_tittle_5'),
+            getTranslated(context, 'construction_description_5'),
           ),
           PoolConstructionItem(
             "images/assets/construction6.JPG",
-            "6. Gunite",
-            """In this phase we apply the gunite using high-pressure hoses to create the inner shell of your new pool. Once the gunite is applied, you will have a very good idea of exactly how your new pool will look!""",
+            getTranslated(context, 'construction_tittle_6'),
+            getTranslated(context, 'construction_description_6'),
           ),
           PoolConstructionItem(
             "images/assets/construction7.JPG",
-            "7. Masonry and Stone",
-            """Call Cahaya Halim Pools for the professional Jakarta Stone and Masonry work that makes your pool look spectacular. This is where your water features come to life. You will select different boulder types, and sizes to create waterfalls, jumping rocks, grottoes, and the unique design aspects of your pool.""",
+            getTranslated(context, 'construction_tittle_7'),
+            getTranslated(context, 'construction_description_7'),
           ),
           PoolConstructionItem(
             "images/assets/construction8.JPG",
-            "8. Decking and Patios",
-            """This is the patio area around your pool. Once the concrete is placed, you have options as to the finished surface. Sundek, textured and/ or stained concrete, and custom flagstone are just a few options. Next we install your outdoor fireplaces, fire pits, fountains, summer kitchens and more.""",
+            getTranslated(context, 'construction_tittle_8'),
+            getTranslated(context, 'construction_description_8'),
           ),
           PoolConstructionItem(
             "images/assets/construction9.JPG",
-            "9. Plaster",
-            """Applying the plaster becomes the final finish to the interior of the pool. Your pool is now water tight. There are many products and colors available. Your plaster is applied to the gunite and is quickly trowled by hand to ensure a beautiful.""",
+            getTranslated(context, 'construction_tittle_9'),
+            getTranslated(context, 'construction_description_9'),
           ),
           PoolConstructionItem(
             "images/assets/construction10.JPG",
-            "10. Pool School",
-            """In this phase we provide a pool school to educate you about the initial start-up and maintenance of your pool. Cahaya Halim Pools is available for any questions you may have in the future.""",
+            getTranslated(context, 'construction_tittle_10'),
+            getTranslated(context, 'construction_description_10'),
           ),
           Stack(
             children: [
