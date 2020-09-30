@@ -1,3 +1,4 @@
+import 'package:cahaya_halim_pool/auth.services.dart';
 import 'package:cahaya_halim_pool/classes/language.dart';
 import 'package:cahaya_halim_pool/localization/localization_constant.dart';
 import 'package:cahaya_halim_pool/main.dart';
@@ -9,10 +10,12 @@ import 'package:cahaya_halim_pool/views/home/home_content.dart';
 import 'package:cahaya_halim_pool/views/home/home_design.dart';
 import 'package:cahaya_halim_pool/views/home/stack_image.dart';
 import 'package:cahaya_halim_pool/widgets/dark_theme/dark_theme.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class HomeContentDesktop extends StatefulWidget {
+  // HomeContentDesktop(this.user);
   @override
   _HomeContentDesktopState createState() => _HomeContentDesktopState();
 }
@@ -35,6 +38,7 @@ class _HomeContentDesktopState extends State<HomeContentDesktop> {
     MaterialAppWithTheme.setLocale(context, _temp);
   }
 
+  FirebaseAuth auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
     ThemeChanger _themeChanger = Provider.of<ThemeChanger>(context);
@@ -42,6 +46,10 @@ class _HomeContentDesktopState extends State<HomeContentDesktop> {
       Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
+          Text(auth.currentUser.uid.toString()),
+          RaisedButton(onPressed: () {
+            AuthServices.signOut();
+          }),
           FlatButton(
             child: Text(
               getTranslated(context, 'dark_theme'),

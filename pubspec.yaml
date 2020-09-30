@@ -35,6 +35,7 @@ dependencies:
   youtube_player_iframe: ^1.1.0
   carousel_slider: ^2.2.1
   video_player: ^0.10.11+2
+  firebase_auth: ^0.18.0+1
 
 dev_dependencies:
   flutter_test:
@@ -117,7 +118,6 @@ flutter:
     - images/assets/testimonial5.JPG
     - lib/lang/en.json
     - lib/lang/id.json
-    
 
   #  - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see

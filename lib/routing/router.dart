@@ -1,5 +1,6 @@
 import 'package:cahaya_halim_pool/views/about/about_view.dart';
 import 'package:cahaya_halim_pool/views/testimonial/testimonial_view.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:cahaya_halim_pool/routing/route_names.dart';
@@ -14,7 +15,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
 
   switch (routingData.route) {
     case HomeRoute:
-      return _getPageRoute(HomeView(), settings);
+      User user;
+      return _getPageRoute(HomeView(user), settings);
     case GalleryRoute:
       return _getPageRoute(GalleryView(), settings);
     case PoolConstructionRoute:
@@ -31,7 +33,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     //   var id = int.tryParse(routingData['id']);
     //   return _getPageRoute(EpisodeDetails(id: id), settings);
     default:
-      return _getPageRoute(HomeView(), settings);
+      User user;
+      return _getPageRoute(HomeView(user), settings);
   }
 }
 
